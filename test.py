@@ -23,7 +23,7 @@ def test(dataloader, model):
 
         # Take class with largest score as predict
         predicts = model(images)
-        predicts = torch.argmax(predicts, 1).tolist()
+        predicts = torch.argmax(predicts, 1)
 
         # Record results
         results['predict'] += predicts.tolist()
